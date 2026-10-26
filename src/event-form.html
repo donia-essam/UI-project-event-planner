@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create event | EventPulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-canvas text-plum min-h-screen flex flex-col antialiased">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-canvas">Skip to content</a>
+<header class="border-b border-mist">
+  <nav class="mx-auto flex h-[88px] max-w-7xl items-center justify-between px-4 sm:px-8" aria-label="Main navigation">
+    <a href="index.html" class="font-display text-3xl">Event<span class="text-brand">Pulse</span></a>
+    <div class="hidden items-center gap-8 md:flex">
+      <a href="explore.html" class="text-brand hover:underline">Explore</a>
+      <a href="itinerary.html" class="text-brand hover:underline">Itinerary</a>
+      <a href="dashboard.html" class="text-brand hover:underline">Dashboard</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="login.html" class="hidden md:inline-block rounded-lg border-2 border-brand px-5 py-2.5 font-medium text-brand">Login</a>
+      <a href="register.html" class="hidden rounded-lg bg-brand px-5 py-2.5 font-medium text-canvas md:inline-block">Register</a>
+      <details class="relative md:hidden">
+        <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-lg text-brand" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+        </summary>
+        <div class="absolute right-0 top-14 z-40 flex w-48 flex-col gap-1 rounded-lg border-2 border-brand bg-canvas p-2">
+          <a href="explore.html" class="rounded px-3 py-3 text-brand">Explore</a>
+          <a href="itinerary.html" class="rounded px-3 py-3 text-brand">Itinerary</a>
+          <a href="dashboard.html" class="rounded px-3 py-3 text-brand">Dashboard</a>
+          <a href="login.html" class="rounded px-3 py-3 text-brand">Login</a>
+          <a href="register.html" class="rounded px-3 py-3 text-brand">Register</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+</header>
+<main id="main-content" class="mx-auto grid w-full max-w-7xl flex-grow gap-8 px-4 py-8 sm:px-8 lg:grid-cols-[300px_1fr] lg:gap-14 lg:py-10">
+  <aside class="hidden space-y-4 lg:block">
+    <p class="text-xs font-bold text-brand">ORGANIZER WORKSPACE</p>
+    <p class="rounded-lg bg-sand px-4 py-3 font-bold text-brand" aria-current="step">Event details</p>
+    <p class="text-sm">Everything your guests need to say, “I’m in.”</p>
+    <div class="hidden rounded-2xl bg-sand p-6 lg:block">
+      <svg width="110" height="78" viewBox="0 0 110 78" fill="none" stroke="#3E4B8E" stroke-width="2" aria-hidden="true"><path d="M2 2h106v22a10 10 0 0 0 0 30v22H2V54a10 10 0 0 0 0-30z"/><path d="M76 2v74" stroke-dasharray="4 5"/><path d="M18 26h40M18 40h40M18 54h24"/></svg>
+      <h2 class="mt-6 font-display text-2xl leading-tight">A little detail. A better turnout.</h2>
+      <p class="mt-4">Share what makes your event special, the exact meeting spot, and what guests can expect.</p>
+      <div class="my-6 border-t-2 border-dashed border-brand/70" aria-hidden="true"></div>
+      <p class="text-sm text-brand">Not quite ready? Save a draft and come back when inspiration strikes.</p>
+    </div>
+  </aside>
+  <section>
+    <div class="mb-3 flex items-center justify-between lg:hidden"><p class="text-xs font-bold text-brand">ORGANIZER WORKSPACE</p><span class="rounded bg-sand px-3 py-1 text-xs font-bold text-brand">DRAFT</span></div>
+    <div class="flex items-start justify-between gap-4">
+      <div><h1 class="font-display text-4xl sm:text-5xl">Make something happen.</h1>
+      <p class="mt-3">Create your event. Bring your community together.</p></div>
+      <span class="mt-2 hidden rounded bg-sand px-3 py-1 text-xs font-bold text-brand lg:inline">DRAFT</span>
+    </div>
+    <form action="#" class="mt-8" novalidate>
+      <fieldset class="space-y-6">
+        <legend class="flex w-full items-baseline justify-between"><span class="font-display text-xl text-brand">The essentials</span><span class="text-sm">* Required</span></legend>
+        <div class="grid gap-6 md:grid-cols-[3fr_2fr]">
+          <div><label for="title" class="font-bold">Event title *</label>
+            <input id="title" name="title" type="text" required aria-required="true" class="mt-2 h-12 w-full rounded-lg border-2 border-brand bg-white px-4"></div>
+          <div><label for="category" class="font-bold">Category *</label>
+            <select id="category" name="category" required aria-required="true" class="mt-2 h-12 w-full rounded-lg border-2 border-brand bg-white px-4"><option value="">Choose a category</option><option>Music</option><option>Tech</option><option>Sports</option><option>Arts &amp; culture</option></select></div>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-3">
+          <div><label for="date" class="font-bold">Date *</label><input id="date" name="date" type="date" required aria-required="true" class="mt-2 h-12 w-full rounded-lg border-2 border-brand bg-white px-4"></div>
+          <div><label for="start" class="font-bold">Start time *</label><input id="start" name="start" type="time" required aria-required="true" class="mt-2 h-12 w-full rounded-lg border-2 border-brand bg-white px-4"></div>
+          <div><label for="end" class="font-bold">End time *</label><input id="end" name="end" type="time" required aria-required="true" class="mt-2 h-12 w-full rounded-lg border-2 border-brand bg-white px-4"></div>
+        </div>
+        <div><label for="location" class="font-bold">Location *</label>
+          <input id="location" name="location" type="text" autocomplete="street-address" required aria-required="true" class="mt-2 h-12 w-full rounded-lg border-2 border-brand bg-white px-4"></div>
+        <div><label for="description" class="font-bold">Description *</label>
+          <textarea id="description" name="description" rows="5" required aria-required="true" class="mt-2 w-full rounded-lg border-2 border-brand bg-white p-4"></textarea></div>
+      </fieldset>
+      <button type="submit" id="submit" class="mt-8 h-12 w-full rounded-lg bg-brand font-bold text-canvas">Publish event</button>
+      <div class="mt-4 flex justify-between font-bold text-brand underline"><a href="#" class="py-2">Save draft</a><a href="explore.html" class="py-2">Cancel</a></div>
+    </form>
+  </section>
+  <a href="#submit" class="sticky bottom-0 -mx-4 flex items-center justify-between bg-sand px-6 py-3 text-xs font-bold text-brand sm:-mx-8 lg:hidden">Continue below to finish your form
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v12M3 9l5 5 5-5"/></svg></a>
+</main>
+<footer class="bg-plum py-10 text-canvas">
+  <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 text-sm sm:px-8 md:flex-row md:items-center md:justify-between">
+    <p>&copy; 2026 EventPulse. SW 302 Project</p>
+    <div class="flex flex-wrap gap-x-6 gap-y-2 underline">
+      <a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Accessibility Statement</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
