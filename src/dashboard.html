@@ -50,6 +50,7 @@
         <li><a href="dashboard.html" aria-current="page" class="flex items-center gap-2 rounded-lg bg-[#F6E0B6] px-3 py-2 text-sm font-semibold text-[#3E4B8E]"><span aria-hidden="true">01</span> Overview</a></li>
         <li><a href="profile.html" class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-[#3E4B8E] hover:bg-[#F6E0B6]"><span aria-hidden="true">02</span> Profile</a></li>
       </ul>
+      <p class="mt-3 text-xs">Your bookings, saves and spending in one place.</p>
 
       <div class="mt-6 hidden rounded-xl bg-[#F6E0B6] p-5 lg:block">
         <svg viewBox="0 0 48 32" class="h-9 w-14 text-[#3E4B8E]" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -58,6 +59,7 @@
         </svg>
         <p class="mt-3 font-serif text-xl font-bold leading-tight text-[#3E4B8E]">Plan ahead.<br>Spend smart.</p>
         <p class="mt-2 text-sm">Keep track of what you booked and what you saved, so nothing overlaps.</p>
+        <p class="mt-4 border-t border-[#3E4B8E]/30 pt-3 text-xs">Not sure yet? Save an event and decide later.</p>
       </div>
     </aside>
 
@@ -72,9 +74,8 @@
       </div>
 
       <!-- Summary -->
-      <div class="mt-8 flex items-center gap-3">
+      <div class="mt-8 flex items-end justify-between border-b border-[#A6BCC9] pb-2">
         <h2 class="font-bold text-[#3E4B8E]">Summary</h2>
-        <span class="h-px flex-1 bg-[#A6BCC9]" aria-hidden="true"></span>
       </div>
       <section aria-label="Summary numbers" class="mt-4 grid gap-4 sm:grid-cols-3">
         <div class="rounded-xl border border-[#A6BCC9] p-5">
@@ -93,9 +94,8 @@
       </section>
 
       <!-- Line chart -->
-      <div class="mt-10 flex items-center gap-3">
+      <div class="mt-10 flex items-end justify-between border-b border-[#A6BCC9] pb-2">
         <h2 class="font-bold text-[#3E4B8E]">Events attended</h2>
-        <span class="h-px flex-1 bg-[#A6BCC9]" aria-hidden="true"></span>
       </div>
       <section class="mt-4 rounded-xl border border-[#A6BCC9] p-5" aria-label="Monthly events attended">
         <div class="overflow-x-auto">
