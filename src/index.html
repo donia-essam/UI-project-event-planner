@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EventPulse | Discover local events and plan your day</title>
+<meta name="description" content="Find concerts, markets, meetups and games around Cairo, save the ones you like and turn them into a day plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-canvas text-plum min-h-screen flex flex-col antialiased">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-canvas">Skip to content</a>
+<header class="border-b border-mist">
+  <nav class="mx-auto flex h-[88px] max-w-7xl items-center justify-between px-4 sm:px-8" aria-label="Main navigation">
+    <a href="index.html" class="font-display text-3xl" aria-current="page">Event<span class="text-brand">Pulse</span></a>
+    <div class="hidden items-center gap-8 md:flex">
+      <a href="explore.html" class="text-brand hover:underline">Explore</a>
+      <a href="itinerary.html" class="text-brand hover:underline">Itinerary</a>
+      <a href="dashboard.html" class="text-brand hover:underline">Dashboard</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="login.html" class="hidden md:inline-block rounded-lg border-2 border-brand px-5 py-2.5 font-medium text-brand">Login</a>
+      <a href="register.html" class="hidden rounded-lg bg-brand px-5 py-2.5 font-medium text-canvas md:inline-block">Register</a>
+      <details class="relative md:hidden">
+        <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-lg text-brand" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+        </summary>
+        <div class="absolute right-0 top-14 z-40 flex w-48 flex-col gap-1 rounded-lg border-2 border-brand bg-canvas p-2">
+          <a href="explore.html" class="rounded px-3 py-3 text-brand">Explore</a>
+          <a href="itinerary.html" class="rounded px-3 py-3 text-brand">Itinerary</a>
+          <a href="dashboard.html" class="rounded px-3 py-3 text-brand">Dashboard</a>
+          <a href="login.html" class="rounded px-3 py-3 text-brand">Login</a>
+          <a href="register.html" class="rounded px-3 py-3 text-brand">Register</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content" class="flex-grow">
+
+  <!-- Hero: copy + search on the left, a "ticket" for this week's pick on the right -->
+  <section class="mx-auto grid max-w-7xl gap-12 px-4 py-10 sm:px-8 lg:grid-cols-[7fr_5fr] lg:items-center lg:gap-20 lg:py-20" aria-labelledby="hero-title">
+    <div>
+      <p class="text-xs font-bold text-brand">CAIRO &middot; THIS WEEKEND AND BEYOND</p>
+      <h1 id="hero-title" class="mt-4 font-display text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">Find your people. Plan the whole day.</h1>
+      <p class="mt-6 max-w-xl text-lg">Rooftop gigs, makers markets, Saturday morning runs. See what&rsquo;s on near you, save what catches your eye and line it all up into one plan.</p>
+
+      <form action="explore.html" method="get" role="search" aria-label="Search events" class="mt-8 grid gap-4 rounded-2xl bg-sand p-4 sm:grid-cols-[1fr_170px_auto] sm:items-end sm:p-5">
+        <div><label for="q" class="text-sm font-bold">Event or venue</label>
+          <input id="q" name="q" type="search" placeholder="Try &ldquo;jazz&rdquo; or &ldquo;Riverside Hall&rdquo;" class="mt-2 h-12 w-full rounded-lg border-2 border-brand bg-white px-4 placeholder:text-plum/70"></div>
+        <div><label for="city" class="text-sm font-bold">City</label>
+          <select id="city" name="city" class="mt-2 h-12 w-full rounded-lg border-2 border-brand bg-white px-4"><option>Cairo</option><option>Giza</option><option>Alexandria</option></select></div>
+        <button type="submit" class="h-12 rounded-lg bg-brand px-7 font-bold text-canvas">Search</button>
+      </form>
+      <p class="mt-4 text-sm">Popular right now:
+        <a href="explore.html?price=free" class="font-bold text-brand underline">Free this weekend</a>,
+        <a href="explore.html?category=music" class="font-bold text-brand underline">Live music</a>,
+        <a href="explore.html?category=sports" class="font-bold text-brand underline">Morning runs</a></p>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+      <div class="absolute inset-0 hidden -rotate-3 rounded-2xl border-2 border-brand sm:block" aria-hidden="true"></div>
+      <article class="relative rounded-2xl bg-sand p-6 sm:rotate-1 sm:p-8" aria-labelledby="pick-title">
+        <div class="flex justify-between text-xs font-bold text-brand"><span>THIS WEEK&rsquo;S PICK</span><span class="font-normal">No. 041</span></div>
+        <div class="mt-6 flex items-start justify-between gap-4">
+          <div class="rounded-lg bg-canvas px-4 py-3 text-center">
+            <p class="text-xs font-bold text-brand">FRI</p><p class="font-display text-4xl leading-none">13</p><p class="text-xs font-bold text-brand">NOV</p>
+          </div>
+          <span class="rounded bg-plum px-3 py-1 text-xs font-bold text-canvas">SELLING FAST</span>
+        </div>
+        <h2 id="pick-title" class="mt-6 font-display text-4xl leading-tight">Jazz on the Roof</h2>
+        <p class="mt-2">The Cairo Quartet plays a late set above the city lights.</p>
+        <dl class="mt-5 grid grid-cols-2 gap-4 text-sm">
+          <div><dt class="text-xs font-bold text-brand">DOORS</dt><dd class="mt-1">8:00 PM</dd></div>
+          <div><dt class="text-xs font-bold text-brand">WHERE</dt><dd class="mt-1">Zamalek Terrace</dd></div>
+        </dl>
+        <div class="relative mt-8">
+          <div class="-mx-6 border-t-2 border-dashed border-brand/70 sm:-mx-8" aria-hidden="true"></div>
+          <span class="absolute -left-9 -top-3 h-6 w-6 rounded-full bg-canvas sm:-left-11" aria-hidden="true"></span>
+          <span class="absolute -right-9 -top-3 h-6 w-6 rounded-full bg-canvas sm:-right-11" aria-hidden="true"></span>
+        </div>
+        <div class="mt-6 flex items-end justify-between gap-4">
+          <div><p class="text-xs font-bold text-brand">TICKETS FROM</p><p class="font-display text-3xl">$18</p></div>
+          <a href="event-details.html" class="rounded-lg bg-brand px-5 py-3 font-bold text-canvas">See event<span class="sr-only">: Jazz on the Roof</span></a>
+        </div>
+        <svg class="mt-6 h-8 w-full" viewBox="0 0 200 24" preserveAspectRatio="none" fill="#3D1534" aria-hidden="true">
+          <path d="M0 0h3v24H0zM6 0h1v24H6zM10 0h4v24h-4zM17 0h1v24h-1zM21 0h2v24h-2zM27 0h1v24h-1zM31 0h4v24h-4zM38 0h2v24h-2zM43 0h1v24h-1zM47 0h3v24h-3zM53 0h1v24h-1zM57 0h2v24h-2zM62 0h4v24h-4zM69 0h1v24h-1zM73 0h2v24h-2zM79 0h3v24h-3zM85 0h1v24h-1zM89 0h2v24h-2zM94 0h4v24h-4zM101 0h1v24h-1zM105 0h3v24h-3zM111 0h1v24h-1zM115 0h2v24h-2zM120 0h4v24h-4zM127 0h1v24h-1zM131 0h3v24h-3zM137 0h2v24h-2zM142 0h1v24h-1zM146 0h4v24h-4zM153 0h1v24h-1zM157 0h2v24h-2zM162 0h3v24h-3zM168 0h1v24h-1zM172 0h4v24h-4zM179 0h1v24h-1zM183 0h2v24h-2zM188 0h3v24h-3zM194 0h1v24h-1zM197 0h3v24h-3z"/>
+        </svg>
+      </article>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="border-y border-mist" aria-labelledby="cat-title">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-8 lg:flex lg:items-center lg:gap-12">
+      <h2 id="cat-title" class="font-display text-2xl lg:w-56 lg:shrink-0">What are you in the mood for?</h2>
+      <ul class="mt-6 flex flex-wrap gap-3 lg:mt-0" role="list">
+        <li><a href="explore.html?category=music" class="flex min-h-11 items-center gap-3 rounded-full border-2 border-brand px-5 py-2.5 font-bold text-brand hover:bg-sand">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+          Music <span class="font-normal">42</span></a></li>
+        <li><a href="explore.html?category=tech" class="flex min-h-11 items-center gap-3 rounded-full border-2 border-brand px-5 py-2.5 font-bold text-brand hover:bg-sand">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg>
+          Tech <span class="font-normal">17</span></a></li>
+        <li><a href="explore.html?category=sports" class="flex min-h-11 items-center gap-3 rounded-full border-2 border-brand px-5 py-2.5 font-bold text-brand hover:bg-sand">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c-3 3-3 15 0 18M12 3c3 3 3 15 0 18"/></svg>
+          Sports <span class="font-normal">23</span></a></li>
+        <li><a href="explore.html?category=arts" class="flex min-h-11 items-center gap-3 rounded-full border-2 border-brand px-5 py-2.5 font-bold text-brand hover:bg-sand">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 2-2s-1-1.5-1-2.5 1-1.5 2-1.5h2a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></svg>
+          Arts &amp; culture <span class="font-normal">31</span></a></li>
+        <li><a href="explore.html?category=food" class="flex min-h-11 items-center gap-3 rounded-full border-2 border-brand px-5 py-2.5 font-bold text-brand hover:bg-sand">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3v8a3 3 0 0 0 6 0V3M8 3v18M17 21V3c-2 1-3 4-3 8h3"/></svg>
+          Food &amp; markets <span class="font-normal">19</span></a></li>
+        <li><a href="explore.html?price=free" class="flex min-h-11 items-center gap-3 rounded-full bg-sand px-5 py-2.5 font-bold text-brand hover:underline">
+          Free entry <span class="font-normal">26</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Featured events: one big card + a short list beside it -->
+  <section class="mx-auto max-w-7xl px-4 py-14 sm:px-8 lg:py-20" aria-labelledby="shortlist-title">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div><p class="text-xs font-bold text-brand">HANDPICKED</p>
+        <h2 id="shortlist-title" class="mt-2 font-display text-4xl">This week&rsquo;s shortlist</h2></div>
+      <a href="explore.html" class="font-bold text-brand underline">Browse all 158 events</a>
+    </div>
+
+    <div class="mt-8 grid gap-8 lg:grid-cols-3">
+      <article class="overflow-hidden rounded-2xl border-2 border-brand md:grid md:grid-cols-2 lg:col-span-2" aria-labelledby="feat-title">
+        <svg class="h-64 w-full md:h-full" viewBox="0 0 400 420" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="feat-poster">
+          <title id="feat-poster">Poster: a large sun setting behind a stepped rooftop skyline</title>
+          <rect width="400" height="420" fill="#3D1534"/>
+          <circle cx="200" cy="230" r="120" fill="#F6E0B6"/>
+          <path d="M0 300h70v-40h50v-50h60v70h50v-30h70v40h100v130H0z" fill="#3E4B8E"/>
+          <path d="M0 340h400M0 370h400M0 400h400" stroke="#A6BCC9" stroke-width="2"/>
+          <text x="28" y="66" fill="#FFF4EB" font-family="Fraunces, Georgia, serif" font-size="40" font-weight="700">Jazz on</text>
+          <text x="28" y="110" fill="#FFF4EB" font-family="Fraunces, Georgia, serif" font-size="40" font-weight="700">the Roof</text>
+        </svg>
+        <div class="flex flex-col p-6 sm:p-8">
+          <div class="flex flex-wrap gap-2"><span class="rounded bg-sand px-3 py-1 text-xs font-bold text-brand">MUSIC</span><span class="rounded bg-plum px-3 py-1 text-xs font-bold text-canvas">SELLING FAST</span></div>
+          <h3 id="feat-title" class="mt-5 font-display text-3xl leading-tight"><a href="event-details.html" class="hover:underline">Jazz on the Roof: Late Set</a></h3>
+          <p class="mt-3">Two sets of standards and new originals from the Cairo Quartet, with the city laid out below you. Bring a jacket, it gets breezy after ten.</p>
+          <dl class="mt-6 space-y-3 text-sm">
+            <div class="flex gap-3"><dt class="w-16 shrink-0 text-xs font-bold text-brand">WHEN</dt><dd>Fri, Nov 13 &middot; 8:00 PM</dd></div>
+            <div class="flex gap-3"><dt class="w-16 shrink-0 text-xs font-bold text-brand">WHERE</dt><dd>Zamalek Terrace, 26 July St</dd></div>
+            <div class="flex gap-3"><dt class="w-16 shrink-0 text-xs font-bold text-brand">PRICE</dt><dd>$18 &ndash; $40</dd></div>
+          </dl>
+          <div class="mt-auto flex flex-wrap gap-3 pt-8">
+            <a href="event-details.html" class="rounded-lg bg-brand px-5 py-3 font-bold text-canvas">View details</a>
+            <a href="itinerary.html" class="rounded-lg border-2 border-brand px-5 py-3 font-bold text-brand">Save to itinerary</a>
+          </div>
+        </div>
+      </article>
+
+      <ul class="flex flex-col gap-4" role="list" aria-label="More events this week">
+        <li class="flex gap-4 rounded-2xl bg-sand p-4">
+          <div class="flex w-16 shrink-0 flex-col items-center justify-center rounded-lg bg-canvas py-2"><span class="text-xs font-bold text-brand">SAT</span><span class="font-display text-2xl leading-none">14</span><span class="text-xs font-bold text-brand">NOV</span></div>
+          <div class="min-w-0"><span class="rounded bg-canvas px-2 py-0.5 text-xs font-bold text-brand">FREE</span>
+            <h3 class="mt-2 font-bold leading-snug"><a href="event-details.html" class="hover:underline">Neighborhood Makers Market</a></h3>
+            <p class="text-sm">10:00 AM &middot; Riverside Hall</p></div>
+        </li>
+        <li class="flex gap-4 rounded-2xl bg-sand p-4">
+          <div class="flex w-16 shrink-0 flex-col items-center justify-center rounded-lg bg-canvas py-2"><span class="text-xs font-bold text-brand">WED</span><span class="font-display text-2xl leading-none">18</span><span class="text-xs font-bold text-brand">NOV</span></div>
+          <div class="min-w-0"><span class="rounded bg-canvas px-2 py-0.5 text-xs font-bold text-brand">$15</span>
+            <h3 class="mt-2 font-bold leading-snug"><a href="event-details.html" class="hover:underline">Cairo Tech Meetup</a></h3>
+            <p class="text-sm">6:30 PM &middot; Innovation Hub</p></div>
+        </li>
+        <li class="flex gap-4 rounded-2xl bg-sand p-4">
+          <div class="flex w-16 shrink-0 flex-col items-center justify-center rounded-lg bg-canvas py-2"><span class="text-xs font-bold text-brand">FRI</span><span class="font-display text-2xl leading-none">20</span><span class="text-xs font-bold text-brand">NOV</span></div>
+          <div class="min-w-0"><span class="rounded bg-plum px-2 py-0.5 text-xs font-bold text-canvas">ONLY 3 LEFT</span>
+            <h3 class="mt-2 font-bold leading-snug"><a href="event-details.html" class="hover:underline">Wheel-Throwing for Beginners</a></h3>
+            <p class="text-sm">5:00 PM &middot; Fustat Clay Studio</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="mx-auto max-w-7xl px-4 pb-14 sm:px-8 lg:pb-20" aria-labelledby="how-title">
+    <h2 id="how-title" class="font-display text-4xl">Three steps. No group chat chaos.</h2>
+    <ol class="mt-8 grid gap-8 md:grid-cols-3" role="list">
+      <li class="border-t-2 border-dashed border-brand/70 pt-5">
+        <p class="font-display text-3xl text-brand" aria-hidden="true">01</p>
+        <h3 class="mt-2 text-lg font-bold">Discover</h3>
+        <p class="mt-2">Filter by date, category, price or neighborhood. Free events are one tap away.</p>
+      </li>
+      <li class="border-t-2 border-dashed border-brand/70 pt-5">
+        <p class="font-display text-3xl text-brand" aria-hidden="true">02</p>
+        <h3 class="mt-2 text-lg font-bold">Save</h3>
+        <p class="mt-2">Keep a shortlist of maybes and mark the ones you&rsquo;re definitely going to.</p>
+      </li>
+      <li class="border-t-2 border-dashed border-brand/70 pt-5">
+        <p class="font-display text-3xl text-brand" aria-hidden="true">03</p>
+        <h3 class="mt-2 text-lg font-bold">Plan the day</h3>
+        <p class="mt-2">Drop events onto a timeline. We flag anything that overlaps, then export it to your calendar.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Itinerary teaser -->
+  <section class="mx-auto max-w-7xl px-4 pb-14 sm:px-8 lg:pb-20" aria-labelledby="plan-title">
+    <div class="grid gap-10 rounded-2xl bg-brand p-6 text-canvas sm:p-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+      <div>
+        <p class="text-xs font-bold text-sand">ITINERARY PLANNER</p>
+        <h2 id="plan-title" class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Saturday, sorted.</h2>
+        <p class="mt-4 max-w-md">Line up the market, lunch and a workshop in one timeline. If two things clash, you&rsquo;ll know before you leave the house.</p>
+        <div class="mt-8 flex flex-wrap items-center gap-6">
+          <a href="itinerary.html" class="rounded-lg bg-canvas px-6 py-3 font-bold text-brand">Start a plan</a>
+          <a href="register.html" class="font-bold text-canvas underline">Create a free account</a>
+        </div>
+      </div>
+      <ol class="space-y-3 rounded-2xl bg-canvas p-5 text-plum sm:p-6" aria-label="Example itinerary for Saturday, November 14">
+        <li class="flex gap-4"><span class="w-20 shrink-0 pt-3 text-sm font-bold text-brand">10:00 AM</span>
+          <div class="flex-1 rounded-lg border-2 border-brand p-3"><p class="font-bold">Neighborhood Makers Market</p><p class="text-sm">Riverside Hall</p></div></li>
+        <li class="flex gap-4"><span class="w-20 shrink-0 pt-3 text-sm font-bold text-brand">1:00 PM</span>
+          <div class="flex-1 rounded-lg border-2 border-brand p-3"><p class="font-bold">Pottery taster session</p><p class="text-sm">Fustat Clay Studio &middot; until 3:00 PM</p></div></li>
+        <li class="flex gap-4"><span class="w-20 shrink-0 pt-3 text-sm font-bold text-brand">2:30 PM</span>
+          <div class="flex-1 rounded-lg border-2 border-l-8 border-plum bg-sand p-3">
+            <p class="font-bold">Zine &amp; Book Swap</p><p class="text-sm">Downtown Library</p>
+            <p class="mt-2 flex items-center gap-2 text-sm font-bold">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18v.5"/></svg>
+              Overlaps with Pottery by 30 min</p></div></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-plum py-10 text-canvas">
+  <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 text-sm sm:px-8 md:flex-row md:items-center md:justify-between">
+    <p>&copy; 2026 EventPulse. SW 302 Project</p>
+    <div class="flex flex-wrap gap-x-6 gap-y-2 underline">
+      <a href="#" class="focus-visible:outline-sand">Privacy Policy</a><a href="#" class="focus-visible:outline-sand">Terms of Service</a><a href="#" class="focus-visible:outline-sand">Accessibility Statement</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

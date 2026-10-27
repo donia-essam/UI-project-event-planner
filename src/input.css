@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+/* EventPulse palette + type, shared by every page */
+@theme {
+  --color-canvas: #FFF4EB; /* Seashell: page background */
+  --color-sand: #F6E0B6;   /* Wheat: cards, badges, highlights */
+  --color-mist: #A6BCC9;   /* Powder Blue: borders and dividers only (low contrast as text) */
+  --color-brand: #3E4B8E;  /* French Blue: actions, links, labels */
+  --color-plum: #3D1534;   /* Midnight Violet: text, headings, footer */
+
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+}
+
+/* Visible keyboard focus everywhere (WCAG 2.4.7) */
+@layer base {
+  :focus-visible {
+    outline: 3px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+}
