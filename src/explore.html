@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore music, art, food and community events happening around Cairo.">
+  <title>Explore events | EventPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-canvas font-sans text-plum antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-brand focus:px-4 focus:py-3 focus:text-canvas">Skip to content</a>
+
+  <header class="border-b border-mist/70">
+    <nav class="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-4 sm:px-8 lg:h-[84px]" aria-label="Main navigation">
+      <a href="index.html" class="font-display text-[27px] tracking-tight sm:text-3xl">Event<span class="text-brand">Pulse</span></a>
+      <div class="hidden items-center gap-9 text-sm font-semibold md:flex">
+        <a href="explore.html" class="text-brand" aria-current="page">Explore</a>
+        <a href="itinerary.html" class="hover:text-brand">Itinerary</a>
+        <a href="dashboard.html" class="hover:text-brand">Dashboard</a>
+      </div>
+      <div class="hidden items-center gap-3 sm:flex">
+        <a href="login.html" class="rounded-lg border border-brand px-4 py-2 text-sm font-semibold text-brand hover:bg-white/60">Log in</a>
+        <a href="register.html" class="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-plum">Join free</a>
+      </div>
+      <details class="relative sm:hidden">
+        <summary class="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-lg text-brand" aria-label="Open navigation menu">
+          <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </summary>
+        <div class="absolute right-0 top-12 z-40 flex w-48 flex-col rounded-xl border border-mist bg-canvas p-2 shadow-lg">
+          <a href="explore.html" aria-current="page" class="rounded-lg bg-sand px-3 py-3 font-semibold text-brand">Explore</a>
+          <a href="itinerary.html" class="rounded-lg px-3 py-3 hover:bg-sand">Itinerary</a>
+          <a href="dashboard.html" class="rounded-lg px-3 py-3 hover:bg-sand">Dashboard</a>
+          <a href="login.html" class="rounded-lg px-3 py-3 hover:bg-sand">Log in</a>
+          <a href="register.html" class="rounded-lg px-3 py-3 hover:bg-sand">Join free</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+
+  <main id="main-content" class="mx-auto max-w-7xl px-4 pb-12 sm:px-8">
+    <section class="pt-8 sm:pt-10" aria-labelledby="page-title">
+      <p class="text-[10px] font-bold tracking-[.16em] text-brand sm:text-xs">YOUR CITY, A LITTLE MORE ALIVE</p>
+      <h1 id="page-title" class="mt-3 max-w-4xl font-display text-[36px] leading-tight sm:text-5xl">Find something worth going out for.</h1>
+      <p class="mt-3 max-w-2xl text-sm leading-6 text-plum/70 sm:text-base">Good plans start close to home. Browse what&rsquo;s happening around Cairo.</p>
+
+      <form action="explore.html" method="get" role="search" aria-label="Search events" class="mt-6 grid gap-3 rounded-2xl border border-mist/80 bg-white p-3 sm:grid-cols-[minmax(0,1fr)_210px_auto] sm:items-center sm:gap-0 sm:p-2">
+        <label class="flex min-h-11 items-center gap-3 px-2 sm:px-4">
+          <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+          <span class="sr-only">Search events, artists or venues</span><input type="search" name="q" placeholder="Search events, artists or venues" class="min-w-0 flex-1 border-0 bg-transparent text-sm placeholder:text-plum/55 focus:outline-none focus:ring-0">
+        </label>
+        <label class="flex min-h-11 items-center gap-3 rounded-lg border border-mist px-3 sm:border-0 sm:border-l sm:border-mist sm:rounded-none sm:px-5">
+          <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span class="sr-only">City</span><select name="city" class="w-full bg-transparent text-sm focus:outline-none"><option>Cairo, Egypt</option><option>Giza, Egypt</option><option>Alexandria, Egypt</option></select>
+        </label>
+        <button type="submit" class="min-h-11 rounded-lg bg-brand px-6 text-sm font-bold text-white transition hover:bg-plum">Search events</button>
+      </form>
+
+      <div class="mt-4 flex items-center gap-2 overflow-x-auto pb-1 text-xs sm:flex-wrap sm:overflow-visible" aria-label="Popular searches">
+        <span class="shrink-0 text-plum/65">Popular:</span>
+        <a href="explore.html?date=this-week" class="shrink-0 rounded-full bg-sand px-4 py-2 font-semibold">This week</a>
+        <a href="explore.html?category=music" class="shrink-0 rounded-full border border-mist bg-white/80 px-4 py-2 hover:bg-sand">Music</a>
+        <a href="explore.html?category=food" class="shrink-0 rounded-full border border-mist bg-white/80 px-4 py-2 hover:bg-sand">Food</a>
+        <a href="explore.html?category=outdoors" class="hidden shrink-0 rounded-full border border-mist bg-white/80 px-4 py-2 hover:bg-sand sm:inline-flex">Outdoors</a>
+      </div>
+    </section>
+
+    <section class="mt-9 sm:mt-12" aria-labelledby="results-title">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div><h2 id="results-title" class="font-display text-[26px] leading-tight sm:text-3xl">Events for your next good day</h2><p class="mt-2 text-sm text-plum/65">18 things to do around Cairo</p></div>
+        <label class="hidden items-center gap-2 rounded-lg border border-mist bg-white px-4 py-3 text-sm md:flex"><span class="text-plum/60">Sort:</span><select name="sort" class="bg-transparent font-semibold"><option>Recommended</option><option>Soonest</option><option>Price: low to high</option></select></label>
+      </div>
+
+      <div class="mt-5 flex gap-2 md:hidden">
+        <button type="button" class="inline-flex min-h-10 flex-1 items-center justify-center gap-2 rounded-lg border border-mist bg-white text-xs font-semibold text-brand">
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M7 12h10m-7 6h4"/></svg>Filters
+        </button>
+        <button type="button" class="inline-flex min-h-10 flex-1 items-center justify-center gap-2 rounded-lg border border-mist bg-white text-xs font-semibold text-brand"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Map view</button>
+      </div>
+      <label class="mt-3 flex min-h-10 items-center justify-between rounded-lg border border-mist bg-white px-3 text-xs md:hidden"><span class="text-plum/60">Sort by</span><select name="mobile-sort" class="bg-transparent font-semibold"><option>Recommended</option><option>Soonest</option><option>Price: low to high</option></select></label>
+
+      <div class="mt-5 grid gap-6 md:grid-cols-[260px_minmax(0,1fr)] lg:grid-cols-[260px_minmax(0,1fr)]">
+        <aside class="hidden self-start rounded-xl border border-mist/70 bg-white p-5 md:block" aria-label="Event filters">
+          <div class="flex items-center justify-between border-b border-mist/50 pb-4"><h3 class="font-bold">Filters</h3><button type="reset" class="text-xs font-bold text-brand hover:underline">Reset</button></div>
+          <fieldset class="border-b border-mist/50 py-4"><legend class="text-sm font-bold">When</legend><label for="date-range" class="mt-3 block text-xs text-plum/60">Date range</label><select id="date-range" name="date" class="mt-2 min-h-10 w-full rounded-lg border border-mist bg-canvas px-3 text-sm"><option>Any date</option><option>This week</option><option>This weekend</option><option>Choose dates</option></select></fieldset>
+          <fieldset class="border-b border-mist/50 py-4"><legend class="text-sm font-bold">Category</legend><div class="mt-3 space-y-3 text-sm">
+            <label class="flex items-center gap-2"><input type="checkbox" name="category" value="music" checked class="h-4 w-4 accent-brand"> <span class="flex-1">Music</span><span class="text-xs text-plum/55">8</span></label>
+            <label class="flex items-center gap-2"><input type="checkbox" name="category" value="arts" class="h-4 w-4 accent-brand"> <span class="flex-1">Arts &amp; culture</span><span class="text-xs text-plum/55">5</span></label>
+            <label class="flex items-center gap-2"><input type="checkbox" name="category" value="food" class="h-4 w-4 accent-brand"> <span class="flex-1">Food &amp; drink</span><span class="text-xs text-plum/55">3</span></label>
+            <label class="flex items-center gap-2"><input type="checkbox" name="category" value="outdoors" class="h-4 w-4 accent-brand"> <span class="flex-1">Outdoors</span><span class="text-xs text-plum/55">2</span></label>
+          </div></fieldset>
+          <fieldset class="border-b border-mist/50 py-4"><legend class="text-sm font-bold">Price</legend><div class="mt-3 space-y-3 text-sm">
+            <label class="flex items-center gap-2"><input type="radio" name="price" value="any" checked class="h-4 w-4 accent-brand">Any price</label>
+            <label class="flex items-center gap-2"><input type="radio" name="price" value="free" class="h-4 w-4 accent-brand">Free</label>
+            <label class="flex items-center gap-2"><input type="radio" name="price" value="paid" class="h-4 w-4 accent-brand">Paid</label>
+          </div></fieldset>
+          <div class="pt-4"><h3 class="text-sm font-bold">Location</h3><button type="button" class="mt-2 flex w-full items-center justify-between rounded-lg border border-mist bg-canvas px-3 py-2.5 text-left text-xs"><span>Cairo + 25 km</span><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button></div>
+        </aside>
+
+        <div>
+          <div class="mb-4 hidden items-center justify-between md:flex"><span class="text-sm font-semibold">All events</span><button type="button" class="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold hover:bg-white"><svg viewBox="0 0 24 24" class="h-4 w-4 text-brand" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Map view</button></div>
+          <div class="grid gap-4 xl:grid-cols-2">
+            <article class="overflow-hidden rounded-2xl border border-mist/70 bg-white/80">
+              <a href="event-details.html" class="group block" aria-label="View Cairo Jazz Nights details">
+                <div class="relative h-40 overflow-hidden bg-plum sm:h-44">
+                  <svg viewBox="0 0 520 180" class="h-full w-full" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Sunset over a Cairo rooftop skyline">
+                    <rect width="520" height="180" fill="#3D1534"/><circle cx="382" cy="62" r="48" fill="#F6E0B6"/><path d="M0 128h40V99h37v29h29V79h55v49h32V95h46v33h35V69h44v59h30V91h49v37h38V85h39v43h46v52H0z" fill="#3E4B8E"/><path d="M0 153h520M0 166h520" stroke="#A6BCC9" stroke-width="2" opacity=".7"/><path d="M120 128V93m0 9h16m-16 11h16m-16 11h16M323 128V83m0 12h14m-14 12h14m-14 12h14" stroke="#F6E0B6" stroke-width="2" opacity=".75"/>
+                  </svg>
+                  <span class="absolute left-4 top-4 rounded-full bg-plum/85 px-3 py-1.5 text-[9px] font-bold tracking-[.15em] text-sand">LIVE MUSIC · ZAMALEK</span>
+                  <span class="absolute right-4 top-4 rounded-full bg-canvas px-3 py-1.5 text-[9px] font-bold tracking-wider text-plum">SELLING FAST</span>
+                </div>
+              </a>
+              <div class="p-4 sm:p-5"><h3 class="font-display text-xl"><a href="event-details.html" class="hover:text-brand">Cairo Jazz Nights</a></h3><p class="mt-2 text-xs text-plum/65">Fri, Nov 14 · 8:00 PM</p><p class="mt-1 text-xs text-plum/65">Cairo Jazz Club · Agouza</p><div class="mt-4 flex items-center justify-between"><span class="text-sm font-bold text-brand">From EGP 450</span><a href="event-details.html" class="rounded-lg bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-plum">View event</a></div></div>
+            </article>
+
+            <article class="overflow-hidden rounded-2xl border border-mist/70 bg-white/80">
+              <a href="event-details.html" class="group block" aria-label="View Design Futures Forum details">
+                <div class="relative h-40 overflow-hidden bg-sand sm:h-44">
+                  <svg viewBox="0 0 520 180" class="h-full w-full" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Modern buildings and a rising sun">
+                    <rect width="520" height="180" fill="#F6E0B6"/><circle cx="404" cy="54" r="37" fill="#FFF4EB"/><path d="M0 143h520v37H0z" fill="#A6BCC9"/><path d="M53 143V80h67v63m16 0V52h83v91m20 0V69h58v74m16 0V42h95v101m18 0V76h53v67" fill="#3E4B8E"/><path d="M66 95h12m17 0h12m-41 18h12m17 0h12m-41 18h12m17 0h12M151 70h14m16 0h14m-44 19h14m16 0h14m-44 19h14m16 0h14m60-29h14m16 0h14m-44 18h14m16 0h14m-44 18h14m16 0h14m29-57h14m16 0h14m16 0h14m-60 19h14m16 0h14m16 0h14m-60 19h14m16 0h14m16 0h14m-60 19h14m16 0h14m16 0h14m-7-55v-25h18v25" stroke="#FFF4EB" stroke-width="3" opacity=".85"/><path d="M0 158h520" stroke="#3D1534" stroke-width="3" opacity=".45"/>
+                  </svg>
+                  <span class="absolute left-4 top-4 rounded-full bg-canvas/90 px-3 py-1.5 text-[9px] font-bold tracking-[.12em] text-brand">ARTS &amp; CULTURE · DOWNTOWN</span>
+                  <span class="absolute right-4 top-4 inline-flex rounded-full bg-brand px-3 py-1.5 text-[9px] font-bold tracking-[.1em] text-white">NEW HOT TOPIC</span>
+                </div>
+              </a>
+              <div class="p-4 sm:p-5"><h3 class="font-display text-xl"><a href="event-details.html" class="hover:text-brand">Design Futures Forum</a></h3><p class="mt-2 text-xs text-plum/65">Sat, Nov 15 · 11:00 AM</p><p class="mt-1 text-xs text-plum/65">Midan Contemporary · Downtown</p><div class="mt-4 flex items-center justify-between"><span class="text-sm font-bold text-brand">Free · Registration required</span><a href="event-details.html" class="rounded-lg bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-plum">View event</a></div></div>
+            </article>
+
+            <article class="overflow-hidden rounded-2xl border border-mist/70 bg-white/80">
+              <a href="event-details.html" class="group block" aria-label="View Nile Night Market details">
+                <div class="relative h-40 overflow-hidden bg-brand sm:h-44">
+                  <svg viewBox="0 0 520 180" class="h-full w-full" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Night market tents beside the Nile">
+                    <rect width="520" height="180" fill="#3E4B8E"/><circle cx="414" cy="46" r="27" fill="#F6E0B6"/><path d="M0 128h520v52H0z" fill="#3D1534"/><path d="m76 131 35-57 36 57zm111 0 39-66 39 66zm120 0 33-53 35 53zm99 0 37-61 37 61z" fill="#F6E0B6"/><path d="M0 151c45-10 75 10 120 0s75 10 120 0 75 10 120 0 75 10 160 0" fill="none" stroke="#A6BCC9" stroke-width="4"/><path d="M0 166c45-10 75 10 120 0s75 10 120 0 75 10 120 0 75 10 160 0" fill="none" stroke="#A6BCC9" stroke-width="3" opacity=".7"/><circle cx="112" cy="68" r="3" fill="#FFF4EB"/><circle cx="193" cy="57" r="3" fill="#FFF4EB"/><circle cx="319" cy="70" r="3" fill="#FFF4EB"/>
+                  </svg>
+                  <span class="absolute left-4 top-4 rounded-full bg-plum/85 px-3 py-1.5 text-[9px] font-bold tracking-[.15em] text-sand">NIGHT MARKET · MAADI</span><span class="absolute right-4 top-4 rounded-full bg-canvas px-3 py-1.5 text-[9px] font-bold tracking-wider text-plum">FREE</span>
+                </div>
+              </a>
+              <div class="p-4 sm:p-5"><h3 class="font-display text-xl"><a href="event-details.html" class="hover:text-brand">Nile Night Market</a></h3><p class="mt-2 text-xs text-plum/65">Sat, Nov 15 · 5:00 PM</p><p class="mt-1 text-xs text-plum/65">Maadi Grand Mall · Maadi</p><div class="mt-4 flex items-center justify-between"><span class="text-sm font-bold text-brand">Free entry</span><a href="event-details.html" class="rounded-lg bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-plum">View event</a></div></div>
+            </article>
+
+            <article class="overflow-hidden rounded-2xl border border-mist/70 bg-white/80">
+              <a href="event-details.html" class="group block" aria-label="View Open-Air Film Night details">
+                <div class="relative h-40 overflow-hidden bg-plum sm:h-44">
+                  <svg viewBox="0 0 520 180" class="h-full w-full" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Open-air cinema beneath the night sky">
+                    <rect width="520" height="180" fill="#3D1534"/><circle cx="408" cy="46" r="32" fill="#F6E0B6"/><circle cx="91" cy="36" r="2" fill="#FFF4EB"/><circle cx="153" cy="55" r="2" fill="#FFF4EB"/><circle cx="283" cy="29" r="2" fill="#FFF4EB"/><path d="M0 132h45V92h35v40h34V78h43v54h31v-29h41v29h38V91h45v41h35V69h42v63h35V97h34v35h37v48H0z" fill="#3E4B8E"/><rect x="198" y="37" width="124" height="75" rx="2" fill="#FFF4EB"/><path d="M212 98c18-33 34-32 48-16 12-22 35-28 54-5v35H212z" fill="#A6BCC9"/><path d="M0 151h520" stroke="#F6E0B6" stroke-width="2" opacity=".6"/>
+                  </svg>
+                  <span class="absolute left-4 top-4 rounded-full bg-plum/85 px-3 py-1.5 text-[9px] font-bold tracking-[.15em] text-sand">FILM · ZAMALEK</span><span class="absolute right-4 top-4 rounded-full bg-canvas px-3 py-1.5 text-[9px] font-bold tracking-wider text-plum">SELLING FAST</span>
+                </div>
+              </a>
+              <div class="p-4 sm:p-5"><h3 class="font-display text-xl"><a href="event-details.html" class="hover:text-brand">Open-Air Film Night</a></h3><p class="mt-2 text-xs text-plum/65">Sun, Nov 16 · 7:30 PM</p><p class="mt-1 text-xs text-plum/65">Al-Azhar Park · Historic Cairo</p><div class="mt-4 flex items-center justify-between"><span class="text-sm font-bold text-brand">EGP 180</span><a href="event-details.html" class="rounded-lg bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-plum">View event</a></div></div>
+            </article>
+          </div>
+
+          <div class="mt-5 flex flex-wrap items-center justify-between gap-3 text-xs text-plum/65"><span>Showing 1–4 of 18 events</span><nav class="flex items-center gap-1" aria-label="Pagination"><a href="explore.html?page=1" aria-current="page" class="grid h-9 w-9 place-items-center rounded-lg bg-brand font-bold text-white">1</a><a href="explore.html?page=2" class="grid h-9 w-9 place-items-center rounded-lg hover:bg-white">2</a><a href="explore.html?page=3" class="grid h-9 w-9 place-items-center rounded-lg hover:bg-white">3</a><a href="explore.html?page=2" class="rounded-lg px-3 py-2 font-semibold text-brand hover:bg-white">Next <span aria-hidden="true">→</span></a></nav></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-mist/70">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-plum/60 sm:flex-row sm:items-center sm:justify-between sm:px-8"><p>© 2026 EventPulse · Find your city&rsquo;s next good thing.</p><div class="flex gap-5"><a href="#" class="hover:text-brand">Privacy</a><a href="#" class="hover:text-brand">Terms</a><a href="#" class="hover:text-brand">Accessibility</a></div></div>
+  </footer>
+</body>
+</html>
